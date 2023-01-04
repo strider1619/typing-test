@@ -38,11 +38,11 @@ export default class Footer extends Component {
 			return;
 		}
 		const res = await fetch(
-			"https://api.github.com/repos/0xRama/typing-test/contributors"
+			"https://api.github.com/repos/strider1619/typing-test/contributors"
 		);
 		const data: [Contributor] = await res.json();
 		const filtered = data.filter(
-			(contributor) => contributor.login !== "0xRama"
+			(contributor) => contributor.login !== "strider1619"
 		);
 		this.setState({ contributors: filtered });
 	};
@@ -61,7 +61,7 @@ export default class Footer extends Component {
 					<a
 						target="_blank"
 						rel="noreferrer"
-						href="https://www.github.com/0xRama/typing-test">
+						href="https://www.github.com/strider1619/typing-test">
 						<span>&lt;/&gt;</span> github
 					</a>
 					<span>
@@ -69,8 +69,8 @@ export default class Footer extends Component {
 						<a
 							target="_blank"
 							rel="noreferrer"
-							href="https://www.github.com/0xRama">
-							@0xRama
+							href="https://www.github.com/strider1619">
+							@strider1619
 						</a>
 					</span>
 					{this.state.showList ? (
